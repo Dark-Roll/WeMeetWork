@@ -1,0 +1,184 @@
+/*****************************
+      Center-field Set
+*****************************/
+
+.toolbar{
+  //basic-set
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //size-set
+  width: 100%; 
+  height: 10%;
+}
+
+.main-screen{
+  //size-set 
+  width: 100%;
+  height: 78%;
+  animation: fadeIn 0.5s;
+}
+
+.videoset{
+  position: absolute;
+  right: 0%;
+  width: 62%;
+  height: 56%;
+}
+
+
+.av-control{
+  //basic-set
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //size-set
+  width: 100%;
+  height: 12%;
+  position: absolute;
+  bottom: 0%;
+}
+
+/*****************************
+          Video Detail
+*****************************/
+.main-video{
+  //basic-set
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //size-set
+  width: 99%;
+  height: 74%;
+  //special-set
+  border-radius: 5px;
+  // background-image: url('../img/666.jpg'); //for test
+  // background-repeat: no-repeat; //for test
+  // background-size: 100%; //for test
+}
+
+.other-video{
+  //basic-set
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  z-index: 1000;
+  width: 100%;
+  height: 28%;
+  overflow: scroll;
+  overflow-y: hidden;
+}
+
+.otheruser{
+  float: left;
+  //margin-right: 1.5%;
+  width: 145px; 
+  height:100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+.otheruser .img{
+  height: 100%;
+  margin-left: 12%;
+}
+
+.video{
+  position: inherit;
+  width:145px;
+  height:110px;
+}
+
+.user-infro{
+  float: left;
+  margin-top:-1%;
+  top: 76%;
+  width: 65%;
+  height: 14%;
+}
+
+.user-image{
+  float: left;
+  padding: 3%;
+  height: 90%;
+}
+
+.user-name{
+  float: left;
+  line-height: 180%;
+  text-align: left;
+}
+
+.user-audio,.user-video{
+  float: right;
+  width:10%;
+  margin-right: 1.5%;
+}
+
+
+#member{ 
+  background: linear-gradient(to right, rgba(255,238,69,1),rgba(255,238,69,1),rgba(255,238,69,1),rgba(255,238,69,0));
+}
+
+#king{
+  background: linear-gradient(to right, rgba(135,211,202,1),rgba(135,211,202,1),rgba(135,211,202,1),rgba(135,211,202,0));
+}
+
+/*****************************
+          Others Detail
+*****************************/
+
+.adduser{
+  //basic-set
+  box-sizing: border-box;
+  padding: 0.3%;
+  position: absolute;
+  top:$toolbar-height+1%;
+  left: 38%;
+  z-index: 500;
+  //size-set
+  width:20%;
+  height: 6%;
+  //special-set
+  color: #2c2c2c;
+  text-align: center;
+  font-size: 1.2em;
+  background-color: rgba(253,251,236,0.98);
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px #d7d2ab;
+  animation: fadeIn 0.5s;
+  &:after{
+    position: absolute;
+    left: 45%;
+    top: -52%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: rgba(253,251,236,0.98);
+    border-width: 10px;
+  }
+}
+
+.brainstorming{
+  //basic-set
+  box-sizing: border-box;
+  padding: 1%;
+  position: absolute;
+  top:10%;
+  left: 34.7%;
+  z-index: 500;
+  //size-set
+  width:6.5%;
+  height: 30%;
+}
+
+#roomURL{
+  width:0.1px;
+  height: 0.1px;
+}

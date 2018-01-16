@@ -1,0 +1,113 @@
+.index{
+  width:100%;
+  height: 100%;
+  text-align: center;
+}
+
+.indexlogo{
+  margin-top: 5%;
+}
+
+.indexName{
+  position: absolute;
+  top: 1%;
+  left: 39%;
+  width: 20%;
+  height: 9%;
+  margin-top: 16%;
+  font-size: 1.5em;
+  animation: fadeIn 1s linear;
+  animation-delay: 2.2s;
+  animation-fill-mode: both;
+}
+
+.indexMeeting{
+  position: absolute;
+  top: 10%;
+  left: 39%;
+  width: 20%;
+  height: 9%;
+  margin-top: 16%;
+  font-size:1.5em;
+  animation: fadeIn 1s linear;
+  animation-delay: 2.2s;
+  animation-fill-mode: both;
+}
+
+.indexinput{
+  float:left;
+  width: 80%;
+  margin-top: 3%;
+  height: 70%;
+  font-size: 1em;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding-left: 3%;
+  box-sizing: border-box;
+  font-family: Microsoft JhengHei;
+  &:focus{
+    background-color: rgba(150, 150, 150, 0.3);
+    transition: 0.5s;
+  }
+}
+
+
+.addRoom{
+  position: absolute;
+  top: 40%;
+  left: 59.5%;
+  width: 55px;
+  height: 55px;
+  background: transparent url('../img/arrow.png') no-repeat 50% 50%;
+  animation: fadeIn 1s linear;
+  animation-delay: 2.2s;
+  animation-fill-mode: both;
+  &:hover{
+    cursor: pointer;
+  }
+  
+}
+
+.logo-top{
+  position: absolute;
+  top: 18%;
+  left: 36%;
+  width: 30%;
+  animation: logo_up 1s ease-out;
+  animation-delay: 0.5s;
+  animation-fill-mode:both;
+}
+
+.logo-bottom{
+  position: absolute;
+  top: 47%;
+  left: 36%;
+  width: 30%;
+  animation: logo_down 1s ease-out;
+  animation-delay: 0.5s;
+  animation-fill-mode:both;
+}
+
+.logo-text{
+  position: absolute;
+  top: 30.5%;
+  left: 34%;
+  width: 35%;
+  animation: fadeInandOut 2.5s linear;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+}
+
+.icon-field{
+  float: left;
+  width: 15%;
+  margin-top: 3%;
+  height: 70%;
+  font-size: 1.1em;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+
+.icon-image{
+  width: 55%;
+  margin-top: 20%;
+}

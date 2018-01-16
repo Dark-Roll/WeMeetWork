@@ -1,0 +1,378 @@
+.paintingtoolbar{
+  box-sizing: border-box;
+  padding: 0.5%;
+  position: absolute;
+  right: 3%;
+  width: 6%;
+  height: 37%;
+  background-color: #fdfbec;
+  border-radius: 6px;
+}
+
+.paintingtoolbar#bigger{
+  top: 17%;
+  height: 60%;
+  line-height: 687%;
+  font-size: 1.5em;
+}
+
+.whiteboard{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 10px;
+  // cursor: url("../img/pen.cur");
+}
+
+.paintingfield{
+  position: absolute;
+  width: 90.5%;
+  height: 78%;
+  top: 10%;
+}
+
+.paintingfield#bigger{
+  height: 100%;
+}
+
+.button2#size{
+  background: transparent url('../img/size.ico') no-repeat top 15% center;
+  background-size: 65%;
+  height: 23%;
+}
+
+.button2#color{
+  height: 22%;
+}
+
+.button2#dowload-img{
+  background:transparent url("../img/download_img.png") no-repeat top 6% center ;
+  background-size: 62%;
+  height: 19%;
+}
+
+.button2#fullscreen1{
+  background: transparent url('../img/fullscreen.png') no-repeat top 20% center;
+  background-size: 75%;
+  height: 23%;
+}
+
+.button2#reset1{
+  background: transparent url('../img/reset.png') no-repeat top 20% center;
+  background-size: 75%;
+  height: 24%;
+}
+
+.button2#backtosmall1{
+  background:transparent url("../img/smaller.png") no-repeat top 20% center ;
+  background-size: 70%;
+  height: 19%;
+}
+
+.color{
+  position: absolute;
+  left: 21%;
+  width: 57%;
+  height: 12%;
+  border-radius: 99px;
+  box-shadow: 0px 0px 2px black;
+}
+
+.color#white,.color#white{
+  background-color: white;
+}
+
+.choice#yellow,.color#yellow{
+  background-color: yellow;
+}
+
+.choice#red,.color#red{
+  background-color: red;
+}
+
+.choice#green,.color#green{
+  background-color: green;
+}
+
+.choice#blue,.color#blue{
+  background-color: blue;
+}
+
+.choice#black,.color#black{
+  background-color: black;
+}
+
+.color.bigger{
+  left: 23%;
+  width: 40px;
+  height: 40px;  
+}
+
+.colorlist{
+  display: none;
+  box-sizing: border-box;
+  padding: 10%;
+  position: absolute;
+  z-index: 1;
+  top: 38%;
+  left: -280%;
+  width: 265%;
+  height: 30%;
+  border-radius: 5px;
+  background-color: rgba(253, 251, 236, 0.5);
+}
+
+.sizelist{
+  display:none;
+  box-sizing: border-box;
+  padding: 10%;
+  position: absolute;
+  z-index: 1;
+  top: 22%;
+  left: -280%;
+  width: 255%;
+  height: 15%;
+  border-radius: 5px;
+  background-color: rgba(253, 251, 236, 0.5); 
+}
+
+.sizelist#visible{
+  display: block;
+  animation: fadeIn 0.5s;
+}
+
+.colorlist#visible{
+  display: block;
+  animation: fadeIn 0.5s;
+}
+
+.colorlist .choice{
+  float: left;
+  margin: 5%;
+  left: 21%;
+  width: 27px;
+  height: 27px;
+  border-radius: 99px;
+  box-shadow: 0px 0px 2px black;
+  &:hover{
+    cursor: pointer;
+    opacity: 0.7;
+  }
+}
+
+.choice1{
+  float: left;
+  margin-right: 2%;
+  width: 30%;
+  height: 90%;
+  &:hover{
+    opacity: .7;
+    cursor: pointer;
+  }
+}
+
+#size1{
+  background: transparent url('../img/size1.png') no-repeat top 20% center;
+  background-size: 75%;
+}
+
+#size2{
+  background: transparent url('../img/size3.png') no-repeat top 20% center;
+  background-size: 65%;
+}
+
+#size3{
+  background: transparent url('../img/size2.png') no-repeat top 20% center;
+  background-size: 65%;
+}
+
+.button2.new{
+  height: 19%;
+}
+
+/* Reservation */
+.reservation-detail{
+  line-height: 150%;
+  position: absolute;
+  z-index: 500;
+  top: 11%;
+  left: 15%;
+  width: 40%;
+  height: 33%;
+  background-color: #fdfbec;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px #d7d2ab;
+  box-sizing: border-box;
+  padding: 1%;
+  &:after{
+    position: absolute;
+    left: 30%;
+    top: -8.5%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #fdfbec;
+    border-width: 10px;
+  }
+}
+
+
+.input-field{
+  font-size: 1.1em;
+  box-sizing: border-box;
+  padding: 2%;
+  float: left;
+  width: 100%;
+  height: 16%;
+  margin-bottom: 1.3%;
+}
+
+.input-field.bigtitle{
+  width: 100%;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 1.3em;
+  margin-bottom: 0%;
+}
+
+.input-field .img{
+  float: left;
+  width: 7%;
+  margin-right: 2%;
+}
+
+.input-field .title{
+  float: left;
+  text-align: center;
+  width: 20%;
+  margin: 0.5%;
+}
+
+.input-field .content{
+  box-sizing: border-box;
+  margin-left: 2%;
+  float: left;
+  width: 65%;
+  padding: 1% 3%; 
+  background-color: rgba(0, 0, 0, 0.1);
+  &:focus{
+    animation: Darken 0.5s;
+    animation-fill-mode: both;
+  }
+}
+
+.submit{
+  box-sizing: border-box;
+  padding: 0.5%;
+  float: right;
+  width: 20%;
+  margin-right: 5%;
+  height: 13%;
+  background-color: #cb253e;
+  color: white;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.ReceviedMeeting{
+  position: fixed;
+  bottom: 2.5%;
+  left: 25%;
+  width: 13%;
+  height: 7%;
+  animation: fadeIn 0.5s;
+  &:hover{
+    bottom: 3%;
+    cursor: pointer;
+  }
+  &:active{
+    bottom: 2.5%;
+  }
+}
+
+.ReceviedMeeting .mail{
+  width: 23%;
+}
+
+.ReceviedMeeting .content{
+  position: absolute;
+  z-index: -1;
+  top: 20%;
+  left: 20%;
+  width: 84%;
+  height: 55%;
+  background-color: #084d82;
+  text-align: center;
+  font-size: 1.1em;
+  line-height: 165%;
+  border-radius: 3px;
+  color: white;
+}
+
+.Recevied-Detail{
+  position: fixed;
+  z-index: 200;
+  bottom: 12%;
+  left: 24%;
+  width: 15%;
+  height: 18%;
+  background-color: #fdfbec;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px #d7d2ab;
+  box-sizing: border-box;
+  padding: 0.8%;
+  animation: fadeIn 0.5s;
+  &:after{
+    position: fixed;
+    z-index: 999;
+    left: 26%;
+    bottom: 9.5%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0);
+    border-top-color: #fdfbec;
+    border-width: 8px;
+  }
+}
+
+.recevied-filed{
+  float:left;
+  width:100%;
+  height: 25%;
+  margin-bottom: 1%;
+}
+
+.recevied-filed .img{
+  float:left;
+  margin-right: 2%;
+  width: 10%;
+}
+.recevied-filed .title{
+  float: left;
+  width: 88%;
+  text-align: left;
+}
+
+.add-button{
+  margin-top: 1%;
+  float: right;
+  width: 65%;
+  height: 24%;
+  background-color: #cb253e;
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+  line-height: 150%;
+}

@@ -1,0 +1,331 @@
+@import 'animation';
+@import 'background';
+@import 'button';
+@import 'left-field';
+@import 'center-field';
+@import 'right-field';
+@import 'vote-block';
+@import '_variable';
+@import 'index';
+@import 'record';
+@import 'brainstorming';
+@import 'whiteboard';
+
+
+html,body,.container,#app{
+  position: absolute;
+  z-index: -999;
+  width: 100%;
+  height: 100%;
+}
+
+.laydate-theme-molv .layui-laydate-main {
+  width: 240px;
+}
+
+.layui-laydate-content td, .layui-laydate-content th {
+  height: 24px;
+}
+
+.layui-laydate-content {
+  padding: 7px;
+}
+
+.layui-laydate-header i {
+  font-size: 10px;
+}
+
+.layui-laydate-header i.laydate-prev-y {
+  left: 5px;
+}
+
+.layui-laydate-header i.laydate-prev-m {
+  left: 30px;
+}
+
+.laydate-time-list ol li {
+  line-height: 25px;
+}
+
+.laydate-time-list p {
+  line-height: 20px;
+}
+
+.laydate-time-list ol {
+  height: 145px;
+}
+
+/*****************************
+0. Three-field (left,center,right)
+*****************************/
+
+.left-field{
+  position: absolute;
+  z-index: -100;
+  left: 0%;
+  width: $left-width;
+  height: 100%;
+}
+
+.center-field{
+  position: absolute;
+  left: $left-width;
+  width: 100%-($left-width + $right-width);
+  height: 100%;
+}
+
+.right-field{
+  position: absolute;
+  right: 0;
+  width: $right-width;
+  height: 100%; 
+}
+
+.user-name{
+  float: left;
+  font-size: 0.9em;
+} 
+
+.voice-img{
+  float: left;
+  margin-left: 20%;
+  margin-top: 2.5%;
+  margin-right: 4%;
+  width: 15%;
+  height: 65%;
+}
+
+/*****************************
+1. Special Set
+*****************************/
+
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+} 
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-button:vertical:decrement {
+  opacity: 100%;
+}
+
+::-webkit-scrollbar-button:vertical:increment {
+  opacity: 100%;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
+
+
+/*****************************
+2. Media Query
+*****************************/
+ 
+@media screen and (max-height: 614px) {
+  html, body,{
+    height: 615px;
+  }
+  .container{
+    height: 615px;
+  }
+  
+  .left-field, .center-field, .right-field, .background {
+    height: 615px;
+  }
+}
+
+// @media screen and (max-width: 1356px) {
+//   html, body,{
+//     overflow-x: scroll;
+//   }
+
+//   .container, .background{
+//     width: 100%;
+//   }
+
+//   .left-field,.right-field, {
+//   }
+//   .center-field{
+//     width: 1056px;
+//   }
+// }
+
+.display-none{
+  display: none;
+}
+
+.visible,#visible{
+  visibility: visible;
+}
+
+.hidden,#hidden{
+  visibility: hidden;
+}
+
+.blackone{
+  position: fixed;
+  z-index: 999;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.room-exit{
+  position: absolute;
+  top: 35%;
+  left: 40%;
+  width: 20%;
+  height: 20%;
+  background-color: $vote-color;
+  box-shadow: 0px 0px 10px #797979;
+  border-radius: 2px;
+}
+
+.room-exit p{
+  text-align: center;
+  font-size: 1.25em;
+  margin: 9% 2% 9% 2%;
+  line-height: 150%;
+}
+
+.room-exit .yes,.room-exit .yes{
+  color: white;
+  position: absolute;
+  bottom: 20%;
+  left: 17%;
+  width: 30%;
+  height: 25%;
+  background-color: #cb253e;
+  border-radius: 3px;
+  &:hover{
+    background-color: lighten(#cb253e,5%)
+  }
+}
+
+.room-exit .no{
+  position: absolute;
+  bottom: 20%;
+  left:53%;
+  width: 30%;
+  height: 25%;
+  border-radius: 3px;
+  &:hover{
+    background-color: lighten(black,90%);
+  }
+}
+
+/*****************************
+3. Loading
+*****************************/
+
+.loader{
+  position: absolute;
+  z-index: -999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.sk-folding-cube {
+  position: absolute;
+  left: 49%;
+  top: 45%;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+}
+
+.sk-folding-cube .sk-cube {
+  float: left;
+  width: 50%;
+  height: 50%;
+  position: relative;
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1); 
+}
+.sk-folding-cube .sk-cube:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #2e2e2e;
+  -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
+          animation: sk-foldCubeAngle 2.4s infinite linear both;
+  -webkit-transform-origin: 100% 100%;
+      -ms-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+}
+.sk-folding-cube .sk-cube2 {
+  -webkit-transform: scale(1.1) rotateZ(90deg);
+          transform: scale(1.1) rotateZ(90deg);
+}
+.sk-folding-cube .sk-cube3 {
+  -webkit-transform: scale(1.1) rotateZ(180deg);
+          transform: scale(1.1) rotateZ(180deg);
+}
+.sk-folding-cube .sk-cube4 {
+  -webkit-transform: scale(1.1) rotateZ(270deg);
+          transform: scale(1.1) rotateZ(270deg);
+}
+.sk-folding-cube .sk-cube2:before {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.sk-folding-cube .sk-cube3:before {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s; 
+}
+.sk-folding-cube .sk-cube4:before {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+@-webkit-keyframes sk-foldCubeAngle {
+  0%, 10% {
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+            transform: perspective(140px) rotateX(-180deg);
+    opacity: 0; 
+  } 25%, 75% {
+    -webkit-transform: perspective(140px) rotateX(0deg);
+            transform: perspective(140px) rotateX(0deg);
+    opacity: 1; 
+  } 90%, 100% {
+    -webkit-transform: perspective(140px) rotateY(180deg);
+            transform: perspective(140px) rotateY(180deg);
+    opacity: 0; 
+  } 
+}
+
+@keyframes sk-foldCubeAngle {
+  0%, 10% {
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+            transform: perspective(140px) rotateX(-180deg);
+    opacity: 0; 
+  } 25%, 75% {
+    -webkit-transform: perspective(140px) rotateX(0deg);
+            transform: perspective(140px) rotateX(0deg);
+    opacity: 1; 
+  } 90%, 100% {
+    -webkit-transform: perspective(140px) rotateY(180deg);
+            transform: perspective(140px) rotateY(180deg);
+    opacity: 0; 
+  }
+}
+
+#stream-shareScreen{
+}
+
+#stream-video{
+  transform:rotateY(180deg);
+}

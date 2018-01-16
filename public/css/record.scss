@@ -1,0 +1,259 @@
+.meetingrecord{
+  width:100%;
+  height: 100%;
+}
+
+.banner{
+  position: absolute;
+  top: 0%;
+  left: 3%;
+  width: 95%;
+  height: 13%;
+}
+
+.meetingrecord .logo{
+  float: left;
+  height: 100%;
+}
+
+.meetingrecord .title{
+  float: right;
+  width: 23%;
+  height: 100%;
+}
+
+.meetingrecord .content{
+  position: absolute;
+  top: 13%;
+  left: 3%;
+  width: 95%;
+  min-height: 75%;
+  background-color: rgba(253, 251, 236, 0.95);
+  border-radius: 6px;
+}
+
+.meetingrecord .circle{
+  float: left;
+  margin: 5% 2.3%;
+  width: 55px;
+  height: 55px;
+  border-radius: 99px;
+  background-color: #ffee3d;
+  text-align: center;
+  font-size: 2.7em;
+  line-height: 160%;
+}
+
+.content .title{
+  box-sizing: border-box;
+  padding: 0.5% 1%;
+  float: left;
+  width: 100%;
+  height: 6%;
+  font-size: 1.5em;
+}
+
+.meetingrecord .text{
+  float: left;
+  padding: 2% 1%;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  font-size: 1.3em;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+.text ul{
+  margin-bottom: 1%;
+}
+
+.ballon{
+  position: absolute;
+  top:0%;
+  left: 0%;
+  z-index: -50;
+}
+
+.ballon.type1{
+  width:3%;
+  top:30%;
+  left:5%;
+  animation: up 60s infinite;
+}
+
+.ballon.type2{
+  width:1.5%;
+  top:45%;
+  left:13%;
+  animation: up 80s infinite;
+}
+
+.ballon.type3{
+  width:4%;
+  top:72%;
+  left:35%;
+  animation: up 130s infinite;
+}
+
+.second-order{
+  font-size: 0.9em;
+}
+
+
+.ballon.type4{
+  width:1.5%;
+  top:65%;
+  left:60%;
+  animation: up 140s infinite;
+}
+
+
+.ballon.type5{
+  width:2%;
+  top:70%;
+  left:85%;
+  animation: up 130s infinite;
+}
+
+.ballon.type6{
+  width:4%;
+  top:50%;
+  left:92%;
+  animation: up 110s infinite;
+}
+
+.moutain{
+  width: 14%;
+  position: absolute;
+  right: 14%;
+  bottom: 6%;
+}
+
+.backtoindex{
+  float: left;
+  margin-top: 4%;
+  width: 5%;
+  height: 30%;
+  background-color: #cb253e;
+  text-align: center;
+  line-height: 178%;
+  border-radius: 40px;
+  color: white;
+  margin-right: 7.8%;
+}
+
+.old-data{
+  box-sizing: border-box;
+  padding: 1%;
+  position: absolute;
+  top:0%;
+  left: 0%;
+  width: 50%;
+  height: 100%;
+  font-size: 1.4em;
+  border-right: solid 1.5px rgba(0,0,0,.7);
+}
+
+.new-data{
+  box-sizing: border-box;
+  padding: 1%;
+  top:0%;
+  position: absolute;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  font-size: 1.4em;
+}
+
+.meetingrecord-table{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.meetingrecord-table li{
+  list-style: none;
+  margin-top: 2%;
+}
+
+.meetingrecord-table tr{
+  width: 100%;
+  height: 5%;
+}
+
+.meetingrecord-title{
+  width: 30%;
+  background-color: #f8d7cd;
+  vertical-align: middle;
+  text-align: center;
+  border: solid 2px #fcece8;
+  font-weight: bold;
+}
+
+#higher{
+  height: 20%;
+}
+
+.meetingrecord-tbody{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#record-detail{
+  height: 30%;
+}
+
+.meetingrecord-content{
+  width: 70%;
+  background-color: #fcece8;
+  vertical-align: middle;
+  box-sizing: border-box;
+  padding: 1% 4%;
+  border: solid 2px #fcece8;
+  font-size: 0.9em;
+  &:hover{
+    background-color: darken(#fcece8,5%);
+  }
+}
+.meetingrecord-textarea{
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  overflow: scroll;
+  font-size: 1em;
+  &:focus,&:hover{
+    background-color: darken(#fcece8,7%);
+    transition: 0.5s;
+  }
+}
+#darken{
+  background-color: darken(#fcece8,3%);
+}
+#darken1{
+  background-color: darken(#f8d7cd,5%);
+}
+
+.edit{
+  float: left;
+  width: 15%;
+  height: 37%;
+  margin-top: 4%;
+  text-align: center;
+  font-size: 1.7em;
+  font-weight: bold;
+  line-height: 155%;
+}
+
+.edit.left{
+  background: linear-gradient(to left, rgba(255,238,69,1),rgba(255,238,69,1),rgba(255,238,69,1),rgba(255,238,69,0));
+  
+}
+
+.edit.right{
+  background: linear-gradient(to right, rgba(135,211,202,1),rgba(135,211,202,1),rgba(135,211,202,1),rgba(135,211,202,0));  
+}

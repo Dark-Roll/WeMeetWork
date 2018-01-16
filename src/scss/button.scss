@@ -1,0 +1,338 @@
+$second-color: #1c4b64;
+$third-color: #ffee3d;
+$button-color: #cb253e;
+$shadow-color: #a31d31;
+$hover-color: #db2843;
+$button-color: #cb253e;
+$shadow-color: #a31d31;
+$hover-color: #db2843;
+
+$button-width: 45px;
+$button-height: 45px;
+
+$button1-width: 35px;
+$button1-height: 35px;
+
+$otherscreen-top: 78%;
+
+/*****************************
+1. Toolbar button (at the top)
+*****************************/
+
+.toolbar-button{
+  //basic-set
+  float: left;
+  margin-right: 4%;
+  //size-set
+  width: $button-width;
+  height: $button-height;
+  //backgurond-set
+  background-color: $button-color;
+  background-repeat: no-repeat;
+  background-position: center center;
+  //special-set
+  border-radius: 99em;
+  box-shadow: 1px 2px #a31d31;
+  outline: none;
+  border-style: none;
+  &:hover{
+    background-color: #db2843;
+    margin-top:-0.5%;
+    cursor: pointer;
+  }
+  &:active{
+    background-color: #db2843;
+    margin-top:0%;
+  }
+} 
+
+.hovertext{
+  display: none;
+  box-sizing: border-box;
+  padding: 0.2%;
+  position: fixed;
+  width: 4.5%;
+  height: 3.2%;
+  color: white;
+  border-radius: 5px;
+  background-color: rgba(0,0,0,0.7);
+  text-align: center;
+}
+
+.toolbar-button#moreinfro{
+  background-image: url('../img/more-infro.png');
+  background-size: 20%;
+}
+
+.toolbar-button#brainstorming{
+  background-image: url('../img/brainstorming.png');
+  background-size: 75%;
+  &:hover .hovertext#brainstorming{
+    display: block;
+    left: 45.3%;
+    top:3.3%;
+  }
+}
+
+.toolbar-button#adduser{
+  background-image: url('../img/addperson.png');
+  background-size: 70%;
+  &:hover .hovertext#adduser{
+    display: block;
+    left: 51%;
+    top:3.3%;
+    width:3%;
+  }
+}
+
+// .toolbar-button#recognition-on{
+//   background-image: url('../img/recognition.png');
+//   background-size: 70%;
+// }
+
+// .toolbar-button#recognition-off{
+//   background-image: url('../img/recognize-off.png');
+//   background-size: 70%;
+// }
+
+.toolbar-button#vote{
+  background-image: url('../img/vote.png');
+  background-size: 60%;
+  &:hover .hovertext#vote{
+    display: block;
+    left: 56.5%;
+    width:3%;
+    top:3.3%;
+  }
+}
+
+.toolbar-button#canvas{
+  background-image: url('../img/canvas.png');
+  background-size: 60%;
+  &:hover .hovertext#canvas{
+    display: block;
+    left: 62%;
+    top:3.3%;
+  }
+}
+
+.toolbar-button#reservation{
+  background-image: url('../img/reservation.png');
+  background-size: 60%;
+  &:hover .hovertext#reservation{
+    display: block;
+    left: 39.5%;
+    top:3.3%;
+  }
+}
+
+.toolbar-button#grid{
+  background-image: url('../img/grid.png');
+  background-size: 60%;
+  margin-bottom: 25%;
+  animation: GridAppear 0.6s linear;
+  &:hover .hovertext#grid{
+    display: block;
+    z-index: 9;
+    left: 45.3%;
+    top: 12.5%;
+    padding: 0.3% .5%;
+    width: 8%;
+    height: 4%;
+    font-size: 1.1em;
+  }
+}
+
+.toolbar-button#sixhat{
+  background-image: url('../img/sixhat.png');
+  background-size: 60%;
+  margin-bottom: 25%;
+  animation: OtherAppear 0.6s linear 0.2s;
+  animation-fill-mode: both;
+  &:hover .hovertext#sixhat{
+    display: block;
+    z-index: 9;
+    left: 45.3%;
+    top: 21.5%;
+    padding: 0.3% .5%;
+    width: 8%;
+    height: 4%;
+    font-size: 1.1em;
+  }
+}
+
+.toolbar-button#KJ{
+  background-image: url('../img/kj.png');
+  background-size: 60%;
+  margin-bottom: 25%;
+  animation: wait 1.2s;
+  animation: OtherAppear 0.8s linear 0.6s;
+  animation-fill-mode: both;
+}
+  
+
+/*****************************
+2. Audio/Video-Control button (at the bottom)
+*****************************/
+
+.av-button{
+  //basic-set
+  float: left;
+  margin-right: 2.5%;
+  //size-set
+  width: $button1-width;
+  height: $button1-height;
+  //background-set
+  background-color: $second-color;
+  background-repeat: no-repeat;
+  background-position: center center;
+  //special-set
+  border-radius: 99em;
+  box-shadow: 1px 2px 0 #153648;
+  outline: none;
+  border-style: none;
+  &:hover{
+    margin-top: -0.5%;
+    background-color: #246080;
+    cursor: pointer;
+  }
+  &:active{
+    margin-top: 0%;
+    background-color: #246080;
+  }
+}
+
+.av-button#audio-on{
+  background-image: url('../img/audio.png');
+  background-size: 80%;
+  &:hover .hovertext#audio-on{
+    display: block;
+    left: 43%;
+    bottom: 9.5%;
+    width: 2.5%;
+  }
+}
+
+.av-button#audio-off{
+  background-image: url('../img/mute.png');
+  background-size: 80%;
+  &:hover .hovertext#audio-off{
+    display: block;
+    left: 42%;
+    bottom: 9.5%;
+    width: 4.5%;
+  }
+}
+
+.av-button#video-on{
+  background-image: url('../img/video.png');
+  background-size: 75%;
+  &:hover .hovertext#video-on{
+    display: block;
+    left: 51.5%;
+    bottom: 9.5%;
+  }
+}
+
+.av-button#video-off{
+  background-image: url('../img/video-off.png');
+  background-size: 75%;
+  &:hover .hovertext#video-off{
+    display: block;
+    left: 51.5%;
+    bottom: 9.5%;
+  }
+}
+
+.av-button#exit{
+  //basic-set
+  margin-top:-0.5%;
+  //size-set
+  width: $button1-width+20px; 
+  height: $button1-height+20px;
+  //background-set
+  background-color: $button-color;
+  background-image: url('../img/exit.png');
+  background-size: 60%;
+  //special-set
+  border-radius: 99em;
+  box-shadow: 1px 2px 0 $shadow-color;
+  &:hover{
+    margin-top:-1.5%;
+    background-color: #db2843;
+    cursor: pointer;
+  }
+  &:active{
+    margin-top:-0.5%;
+    background-color: #db2843;
+  }
+  &:hover .hovertext#exit{
+    display: block;
+    left: 47%;
+    bottom: 12%;
+  }
+}
+
+.button-submit{
+  width:10%;
+  height:100%;
+  //background-set
+  background-color: black;
+  background-image: url('../img/exit.png');
+  background-size: 60%;
+}
+
+.sharescreen{
+  box-sizing: border-box;
+  padding: 1.1% 1.5%;
+  position: absolute;
+  bottom: 26%;
+  left: 61%;
+  width: 5%;
+  height: 52%;
+  border-radius: 25px;
+  background: #f9ed55 url(../img/screensharing.png) no-repeat center center;
+  box-shadow: 1px 1px 0px darken(#f9ed55, 40%);
+  background-size: 65%;
+  font-size: 1.25em;
+}
+
+.sharescreen#no-active{
+  &:hover{
+    cursor: pointer;
+    animation: ShareScreen 0.5s;
+    animation-fill-mode: both;
+  }
+  &:hover .sharetext{
+    display: block;
+    float: right;
+    animation-delay: 1s;
+    animation: fadeIn 0.5s;
+    animation-fill-mode: both;
+  }
+}
+
+.sharescreen#active{
+  width: 15%;
+  background-size: 23%;
+  background-position: left 13% center;
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+.sharescreen .sharetext{
+  display: none;
+  font-weight:bold;
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+.sharescreen .sharetext#active{
+  display: block;
+  float: right;
+  &:hover{
+    cursor: pointer;
+  }
+}

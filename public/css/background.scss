@@ -1,0 +1,263 @@
+
+$bgground-color1: #00944d;
+$bgground-color2: #79543a;
+$bgground-color3: #906441;
+$bgground-color: #33b747;
+
+$sky-height: 94%;
+$ground-height: 100%-$sky-height;
+$forest-position: $ground-height;
+
+/*****************************
+1.Set(sky,ground,forest,cloud)
+*****************************/
+
+.sky{
+  //basic-set
+  z-index: -500;
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  height: $sky-height;
+  //background
+  overflow: hidden;
+}
+
+.ground{
+  //basic-set
+  z-index: -500;
+  position: absolute;
+  bottom: 0%;
+  //basic-size
+  width: 100%;
+  height: $ground-height;
+}
+
+.ground#nature{
+  background-color: $bgground-color;
+}
+
+.ground#universe{
+  background-color: #036d84;
+}
+
+.forest{
+  //basic-set
+  z-index: -500;
+  position: absolute;
+  bottom: $forest-position;
+  //basic-size
+  width: 100%;
+}
+
+
+/*****************************
+2-1 Set-detail:Forest
+*****************************/
+
+//Tree Type
+
+.tree{
+  //basic-set
+  position: absolute;
+  bottom:0%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.tree.type1{
+  background-image: url('../img/tree.png');
+}
+
+.tree.type2{
+  background-image: url('../img/tree2.png');
+}
+
+.tree.type3{
+  background-image: url('../img/tree3.png');
+}
+
+//Tree Site
+.tree.site1{
+  left: 2%;
+  width: 20px;
+  height: 35px;
+}
+
+.tree.site2{
+  left: 12%;
+  width: 40px;
+  height: 50px;
+}
+
+.tree.site3{
+  left: 18%;
+  width: 20px;
+  height: 30px;
+}
+
+.tree.site4{
+  right: 19%;
+  width: 25px;
+  height: 30px;
+}
+
+.tree.site5{
+  right: 10%;
+  width: 22px;
+  height: 40px;
+}
+
+.tree.site6{
+  right: 5%;
+  width: 20px;
+  height: 30px;
+}
+
+.tree.site7{
+  left: 30%;
+  width: 28px;
+  height: 32px;
+}
+
+.tree.site8{
+  left: 40%;
+  width: 15px;
+  height: 25px;
+}
+
+.tree.site9{
+  right: 30%;
+  width: 15px;
+  height: 22px;
+}
+
+.tree.site10{
+  right: 38%;
+  width: 20px;
+  height: 22px;
+}
+
+/*****************************
+2-2 Set-detail:Cloud
+*****************************/
+
+.cloud{
+  z-index: -500;
+  position: absolute;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.cloud.site1{
+  width: 10%;
+  left: 30%;
+  top:5%;
+  animation: animatedcloud 120s infinite;
+}
+
+.cloud.site2{
+  width: 7%;
+  left: 15%;
+  top:20%;
+  animation: animatedcloud 150s infinite;
+}
+
+.cloud.site3{
+  width: 9%;
+  left: 2%;
+  top:35%;
+  animation: animatedcloud 160s infinite;
+}
+
+.cloud.site4{
+  width: 7%;
+  left: 50%;
+  top:40%;
+  animation: animatedcloud 100s infinite;
+}
+
+.cloud.site5{
+  width: 9%;
+  left: 70%;
+  top:14%;
+  animation: animatedcloud 70s infinite;
+}
+
+.cloud.site6{
+  width: 9%;
+  left: 85%; 
+  top:30%;
+  animation: animatedcloud 75s;
+}
+
+.cloud.site7{
+  width: 4%;
+  left: 60%; 
+  top:1%;
+  animation: animatedcloud 100s infinite;
+}
+
+//Second
+
+.cloud.site8{
+  width: 7%;
+  left: -10%; 
+  top:10%;
+  animation: animatedcloud 180s infinite;
+  animation-delay: 20s;
+}
+
+.cloud.site9{
+  width: 3%;
+  left: -5%; 
+  top:25%;
+  animation: animatedcloud 180s infinite;
+  animation-delay: 30s;
+}
+
+.cloud.site10{
+  width: 5%;
+  left: -5%; 
+  top:35%;
+  animation: animatedcloud 180s infinite;
+  animation-delay: 40s;
+}
+
+/*****************************
+2-3 Set-detail:Others
+*****************************/
+
+.mountain{
+  z-index: -498;
+  right: 8%;
+  //image-infro
+  background-image: url('../img/mountain.png');
+  width: 260px;
+  height: 95px;
+  //image-site
+}
+
+.mailbox{
+  width: 35%;
+  position: absolute;
+  z-index: -2;
+  bottom: 0%;
+  left: 0.5%;
+}
+
+/**Universe*/
+
+.bluemountain{
+  background-image: url(../img/universe-bluemountain.png);
+  left: 3%;
+  width: 350px;
+  height: 82px;
+}
+
+.bluemountain1{
+  background-image: url(../img/universe-bluemountain1.png);
+  right: 1%;
+  width: 290px;
+  height: 86px;
+}
