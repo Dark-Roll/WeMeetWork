@@ -10,64 +10,107 @@
   height: 50%;
 }
 
-.eagle {
+.box {
   position: absolute;
+  top:1.5% ;
+  right:85%;
+  width: 150px;
+}
+
+.eagle {
+  position: fixed;
   z-index: 2;
   right:0%;   
   top:0%;
   height: 16%;
-  
+  cursor:pointer;
   //animation: eagle 5s infinite;
 }
 
-.hoverAdvice{
+.adviceContainer{
+  background-color: #3D348B;
+  border: 1px solid;
+  border-color: #3D348B;
+  height: 1600%;
+  width: 200%;
+  top:5%;
+  right:17%;
+  z-index: 10;
+  position: absolute;
+}
+
+
+.adviceIntroduce{
+  display: inline-block;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 125%;
+  padding: 7px 10px;
+  color: #E0E2DB;
+}
+
+.adviceInput{
   padding: 5px 15px;
-  border: 2px solid;
-  border-color: #f39c12;
-  background-color:  rgba(245, 209, 4,0.8);
+  border: none;
+  position: absolute;
+  // border: 2px solid;
+  // border-color: #f39c12;
+  background-color: #E0EEC6;
   // cursor:pointer;
   display: block;
-  width: 150px;
-  height: 50px;
-  top:5%;
-  right: 15%;
-  position: absolute;
+  width: 90%;
+  height: 60%;
+  bottom: 0%;
+  resize:none;
+
+  overflow-y: auto;
+  
+  // right: 15%;
+  // position: absolute;
   z-index: 3;
   // background-color: rgb(255,255,255);
   // border-bottom-style: solid;
-  text-decoration:underline;
 }
 
-// .adviceSend{
-//   position: absolute;
-//   top:5% ;
-//   right:10%;
-//   z-index: 4;
+.adviceSendButton{
+  position: absolute;
+  // top:5% ;
+  right:4%;
+  z-index: 4;
+  bottom: 5%;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #f39c12;
 
-//   background-color: #f39c12;
-
-//   font-size: 20px;
-//   font-size: 1vmax;
-//   pointer-events: auto;
-//   cursor: pointer;
+  // font-size: 20px;
+  font-size: 1vmax;
+  pointer-events: auto;
+  cursor: pointer;
  
-//   width: initial;
-//   padding: 1.452vh 2.96vw;
-//   border-radius: 40px;
-//   color: #fff;
-//   border: 1px solid #121416;
-//   transition: all .2s ease-in-out;
-//   display: inline-block;
-//   margin: 0;
-//   box-shadow: 0 0 1px -1px #121416;
-//   font-family: inherit;
+  // width: initial;
+  // padding: 1.452vh 2.96vw;
+  
+  color: #fff;
+  // border: 1px solid #121416;
+  transition: all .2s ease-in-out;
+  display: inline-block;
+  margin: 0;
+  box-shadow: 0 0 1px -1px #121416;
+  font-family: inherit;
+
+  -webkit-transition-duration: 0.2s; /* Safari */
+  transition-duration: 0.2s;
+  text-decoration: none;
+  overflow: hidden;
+ 
+}
 
 
-//   // cursor: pointer;
-// }
+// 去除黄色的框：outline:none;
 
 
-// .adviceSend {
+
+// .adviceSendButton {
 //   position: absolute;
 //     top:5% ;
 //     right:10%;
@@ -88,17 +131,17 @@
 //   // overflow: hidden;
 // }
 
-// .adviceSend:hover{
-//  background:#fff;
-//  box-shadow:0px 2px 10px 5px #97B1BF;
-//  color:#000;
-// }
+.adviceSendButton:hover{
+ background:#fff;
+ box-shadow:0px 2px 10px 5px #97B1BF;
+ color:#000;
+}
 
-// .adviceSend:active {
-//   background:#fff;
-//   // box-shadow: 0 5px #95a5a6;
-//   transform: translateY(1%);
-// }
+.adviceSendButton:active {
+  background: inherit;
+  // box-shadow: 0 5px #95a5a6;
+  transform: translateY(50%);
+}
 
 
 
@@ -114,15 +157,6 @@
 }
 
 
-.adviceContainer{
-  background-color: #f9ed55;
-  height: 150px;
-  width: 150px;
-  top:5%;
-  right:17%;
-  // z-index: 0;
-  position: absolute;
-}
 
 // .eagleHover:hover .hoverAdvice{
 //   display: block;

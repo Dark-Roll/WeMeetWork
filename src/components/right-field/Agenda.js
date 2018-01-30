@@ -12,15 +12,10 @@ import {
     showAdvice
 } from "../../actions/Actions";
 
-// import{   Button  }from 'react-native';
-
-
 
 import {render} from 'react-dom';
-// import Input from 'react-bootstrap/lib/Input.js';
-import EagleButton from "./eagleButton";
 
-// import {Button} from 'react';
+import EagleButton from "./eagleButton";
 
 //import { identifier } from "../../../../../AppData/Local/Microsoft/TypeScript/2.6/node_modules/@types/babel-types";
 
@@ -30,18 +25,9 @@ class Agenda extends React.Component {
 
         this.state ={
             advice:"",
-            // adviceContainer:false
+         
         };
-    
 
-        // this.state = {
-        //     agendaList: [
-        //         {
-        //             content: "", //單個議程內容
-        //             isAgendaFinished: false //議程是否完成，會觸發checkbox是否被選取&是否有刪除縣
-        //         }
-        //     ]
-        // };
         this.onClick_ToggleDeleteAgenda = this.onClick_ToggleDeleteAgenda.bind(
             this
         );
@@ -79,16 +65,6 @@ class Agenda extends React.Component {
         this.props.dispatch(deleteAgenda(key));
         socket.emit("deleteAgenda", key);
     }
-
-    // onClick_showAdvice(){
-    //     this.props.dispatch(showAdvice());
-    // }
-
-    // showAdvice(){
-    //     this.setState({
-    //         adviceContainer:!this.state.adviceContainer
-    //     });
-    // }
 
     onChange_advice(e){
         this.setState({ advice: e.target.value });
@@ -167,29 +143,29 @@ class Agenda extends React.Component {
         // }
   
 // advice button begins        
-        // let adviceButton = (
+    let adviceButton = (
 
     <EagleButton click={this.selectClick} 
     needConfirm={this.state.needConfirm}>
-                 <div className="showAdvice">
-        <img  className="eagle" src="img/eagle.png" 
-            onClick={ ()=> {
-                this.showAdvice(); }
-            }
-                />
-            
-            <div className="adviceContainer" >
         
-                <input className="hoverAdvice"    
-                onChange={e => {
-                    this.onChange_advice(e);
-                }}
-                value={this.state.advice}
-                placeholder="請輸入你的advice"
+            <div className="adviceContainer" >
+
+
+                <div className="adviceIntroduce">
+                    Hi there! Leave a message and we'll get back to you as 
+                    soon as possible :)
+                </div>
+                <textarea className="adviceInput"    
+                    
+                    value={this.state.advice}
+                    placeholder="請輸入你的advice"
+                    onChange={e => {
+                        this.onChange_advice(e);
+                    }}
                 />    
             
                 <div
-                    className="adviceSend"
+                    className="adviceSendButton"
                     // ref = { "dvice_input" + advice}
                     // style={
                     //     this.props.adviceList[advice].isNull
@@ -207,19 +183,12 @@ class Agenda extends React.Component {
                     SEND
                 </div> 
             </div>     
-        </div> 
+        
 
-
-        <button type="button" name="新增" 
-            className="btn" 
-            onClick={this.selectConfirm}>
-                {/* confirm 後this拿掉  */}
-                傳送
-        </button> 
     </EagleButton>
 
        
-    // );
+     );
 // advice button ends
 
 
@@ -312,82 +281,19 @@ class Agenda extends React.Component {
 
         return (
             <div className="agenda-block">
+
+                {adviceButton}
+
                 <img className="branch" src="img/branch.gif" />
-                <EagleButton />
+            
                 
-                {/* selectClick後 this拿掉 */}
+                {/* <img  className="eagle" src="img/eagle.png"  /> */}
 
+        
 
-{/* <div className="eagleButton"
-    onClick={e => {
-        this.onClick_showAdvice();
-    }}
-> */}
-   
-
-               
                 
-
-
-            {/*  顯示的advice button 不是eagle button */}
-
-{/*                 
-                <div className="EEagle"  
-                style={{ right:'0px' }}   > 
-                    <img className="eagle" src="img/eagle.png" />
-                </div> */}
-                
-                 
-                  {/* vs */}
-                {/* <div>{adviceButton}</div> */}
-                {/* <div className="eagleHover">
-???????????????????????????
-
-                <EagleButton />
-                
-
-                <div className="eagleButton"
-                    onClick={e => {
-                        this.onClick_showAdvice();
-                    }}
-                >
-                    <img  className="eagle" src="img/eagle.png" />
-                    
-                    {/* <div className="adviceBar"> */}
-                        {/* <input className="hoverAdvice"    
-                        onChange={e => {
-                            this.onChange_advice(e);
-                        }}
-                        value={this.state.advice}
-                        placeholder="請輸入你的advice"
-                        />     */}
-                    
-                        {/* <div
-                            className="adviceSend"
-                            // ref = { "dvice_input" + advice}
-                            // style={
-                            //     this.props.adviceList[advice].isNull
-                            //         ? {}
-                            //         :  {
-                                    
-                            //         }
-                            // }
-
-
-                            onClick={ () => {
-                                this.onClick_adviceSend();
-                            }}
-                        >    
- ?????????????????????????????????                          
-                            這是一張圖片
-                        </div> */}
-                    
-                   
-                    {/* </div> */}
-                {/* </div>  */}
-
-
-                {/* </div> */}
+       
+                    <Advice/>
 
                 <div className="flag">
                     <div className="bar" />
@@ -404,13 +310,7 @@ class Agenda extends React.Component {
                         />
                     </div>
 
-                    {/* <input
-                            className="text"
-                            ref =
-                            className="t    ext"
-                            type="text"
-                            
-                    /> */}
+          
 
                     <div
                         className="agenda-add"
@@ -423,15 +323,14 @@ class Agenda extends React.Component {
                             增加議程
                         </div>
 
-                        {/* <eagleButton /> */}
-                        1
+                        
 
                     </div>
                     
                   
 
                 </div>
-                3
+                
             </div>
         );
     }

@@ -13,7 +13,7 @@ export default function agenda(state = agendaList, action) {
 			return action.data;
 		case "newAgenda":
 			return [
-				...state,
+				...state,  //上個狀態的所有資料 (第一次是初始資料)
 				{
 					content: "",
 					isAgendaFinished: false

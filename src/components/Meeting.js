@@ -26,8 +26,8 @@ import {
     delRemoteStreamURL,
     addCandidateQueue,
     toggleUserMedia,
-    toggleAudio,
-    adviceSend
+    toggleAudio
+    // adviceSend
 } from "../actions/Actions";
 
 import {
@@ -63,7 +63,8 @@ import Painting from "./center-field/Painting";
 
 //right-field, total 2 components
 // import Advice from "./right-field/Advice"
-import TestP from "./right-field/TestP"
+import TestP from "./right-field/TestP";
+import EagleButton from "./right-field/eagleButton";
 
 import Agenda from "./right-field/Agenda";
 import Vote from "./right-field/Vote";

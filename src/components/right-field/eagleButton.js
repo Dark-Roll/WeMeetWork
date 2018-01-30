@@ -57,17 +57,37 @@ export default class EagleButton extends Component{
 {/* ???????????????????????????? div ? 
     style={{'margin': '20'}} 
     style={{'display':'block','marginTop': '118'}} */}
-                <button 
+                {/* <button 
                     // ref="tip" 
-                    className="sendBtn"            
+                    className="sendBtn"  
+                    style={{
+                        // 'z-index':'9' ,
+                        'cursor': 'pointer'
+                    }}          
+                    
                     onClick={
                         this.changeDisplay.bind(this)
                     }
                 >
                     確定
                     {this.state.clickProps.name}   
-                    {/* 顯示按鈕明子 */}
-                </button>       
+                  
+                </button>        */}
+
+                <img  className="eagle" src="img/eagle.png" 
+                     
+                    onClick={
+                        this.changeDisplay.bind(this)
+                    } 
+                />
+
+                <div className="filter-box" 
+                    style={{
+                        'display':this.state.clickProps.display
+                    }}>
+                     
+                     {this.props.children}
+                </div>
          </div>
      );
   }
